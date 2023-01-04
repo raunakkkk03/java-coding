@@ -66,3 +66,28 @@ Output-
 Output
 3,2,4,7,10,6,5
 	5,6,10,7,4,2,3
+find minimun value-
+	public class Main
+{
+    public int findMinimum(int[] arr){
+       if(arr==null || arr.length==0){
+           throw new IllegalArgumentException("Invalid input");
+       }
+       int min=arr[0];
+       for(int i=1;i<arr.length;i++){
+           if(arr[i]<min){
+               min=arr[i];
+           }
+       }
+       return min;
+    }
+	
+     public static void main(String[] args){
+        int[] arr={5,9,3,15,1,2};
+        Main ma=new Main();
+        System.out.println(ma.findMinimum(arr));
+        
+    }
+}
+ouput
+1
