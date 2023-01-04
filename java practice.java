@@ -2,7 +2,7 @@
 REMOVE EVEN INTEGER-
 public class Main
 {
-	 public static void printArray(int[] arr){
+public static void printArray(int[] arr){
         int n=arr.length;
         for(int i=0;i<n;i++){
             System.out.print(arr[i]+" ");
@@ -35,3 +35,6 @@ public class Main
         printArray(result);
     }
 }
+Output-
+	32471065
+	375
