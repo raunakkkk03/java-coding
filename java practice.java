@@ -182,3 +182,27 @@ public class Main
 OUTPUT
 THE SIZE OF ORIGINAL ARRAY=5
 THE SIZE OF ORIGINAL ARRAY AFTER RESIZE=10	
+
+FIND MISSING NUMBER IN AN ARRAY
+public class Main
+{
+    public static int findMissingNumber(int[] arr){
+        int n=arr.length+1;
+        int sum=n*(n+1)/2;
+        for(int num:arr){
+            sum=sum-num;
+        }
+        return sum;
+    }
+    public void arrayDemo(){
+        int[] arr={1,3,6,8,2,4,7};
+        System.out.println(findMissingNumber(arr));
+    }
+	public static void main(String[] args) {
+		Main arrUtil=new Main();
+	    arrUtil.arrayDemo();
+	
+	}
+}
+OUTPUT
+5
