@@ -152,3 +152,33 @@ public class Main
 }
 output
 8,1,2,1,3,0,0
+	
+RESIZE AN ARRAY
+
+public class Main
+{
+    public void printArray(int[] arr){
+        int n =arr.length;
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+    public int[] resize(int[] arr,int capacity){
+        int[] temp= new int[capacity];
+        for(int i=0;i<arr.length;i++){
+            temp[i]=arr[i];
+        }
+        return temp;
+    }
+	public static void main(String[] args) {
+		Main arrUtil=new Main();
+		int[] original=new int[] {5,1,2,9,10};
+		System.out.println("the size of original array ="+ original.length);
+		original=arrUtil.resize(original,10);
+		System.out.println("the size of original array after resize="+ original.length);
+	}
+}
+OUTPUT
+THE SIZE OF ORIGINAL ARRAY=5
+THE SIZE OF ORIGINAL ARRAY AFTER RESIZE=10	
