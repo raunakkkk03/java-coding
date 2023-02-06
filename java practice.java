@@ -236,3 +236,29 @@ public class Main
 }
 output-
 the string ispalindrome	
+
+representation of singly linked list
+public class Main
+{
+    
+        private ListNode head;
+        private static class ListNode{
+            private int data;
+            private ListNode next;
+            
+            public ListNode(int data){
+                this.data=data;
+                this.next=null;
+            }
+        }
+        public static void main(String[] args) {
+	    Main SinglyLinkedList=new Main();
+	    SinglyLinkedList.head=new ListNode(10);
+	    ListNode second=new ListNode(1);
+	    ListNode third=new ListNode(8);
+	    ListNode fourth=new ListNode(11);
+	    
+	    SinglyLinkedList.head.next=second;
+	    second.next=third;
+	    third.next=fourth;
+	    
