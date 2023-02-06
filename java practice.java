@@ -262,3 +262,77 @@ public class Main
 	    second.next=third;
 	    third.next=fourth;
 	    
+how to represent data in sll
+
+public class Main
+{
+    
+        private ListNode head;
+        private static class ListNode{
+            private int data;
+            private ListNode next;
+            
+            public ListNode(int data){
+                this.data=data;
+                this.next=null;
+            }
+        }
+        public void display(){
+            ListNode current=head;
+            while(current!=null){
+                System.out.print(current.data+"-->");
+                current=current.next;
+            }
+            System.out.print("null");
+        }
+        public static void main(String[] args) {
+	    Main SinglyLinkedList=new Main();
+	    SinglyLinkedList.head=new ListNode(10);
+	    ListNode second=new ListNode(1);
+	    ListNode third=new ListNode(8);
+	    ListNode fourth=new ListNode(11);
+	    
+	    SinglyLinkedList.head.next=second;
+	    second.next=third;
+	    third.next=fourth;
+	    
+	    SinglyLinkedList.display();
+}
+output
+
+public class Main
+{
+    
+        private ListNode head;
+        private static class ListNode{
+            private int data;
+            private ListNode next;
+            
+            public ListNode(int data){
+                this.data=data;
+                this.next=null;
+            }
+        }
+        public void display(){
+            ListNode current=head;
+            while(current!=null){
+                System.out.print(current.data+"-->");
+                current=current.next;
+            }
+            System.out.print("null");
+        }
+        public static void main(String[] args) {
+	    Main SinglyLinkedList=new Main();
+	    SinglyLinkedList.head=new ListNode(10);
+	    ListNode second=new ListNode(1);
+	    ListNode third=new ListNode(8);
+	    ListNode fourth=new ListNode(11);
+	    
+	    SinglyLinkedList.head.next=second;
+	    second.next=third;
+	    third.next=fourth;
+	    
+	    SinglyLinkedList.display();
+    }
+output
+10-->1-->8-->11-->null	
