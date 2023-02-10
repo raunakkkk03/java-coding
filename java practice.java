@@ -389,3 +389,61 @@ public class Main
 }
 output
 length is 4	
+
+insert a node in sll
+public class Main
+{
+    
+        private ListNode head;
+        private static class ListNode{
+            private int data;
+            private ListNode next;
+            
+            public ListNode(int data){
+                this.data=data;
+                this.next=null;
+            }
+        }
+        public void display(){
+            ListNode current=head;
+            while(current!=null){
+                System.out.print(current.data+"-->");
+                current=current.next;
+            }
+            System.out.print("null");
+        }
+        public int length(){
+            if(head==null){
+                return 0;
+            }
+            int count=0;
+            ListNode current=head;
+            while(current!=null){
+                count++;
+                current=current.next;
+            }
+            return count;
+        }
+        public void insertfirst(int value){
+            ListNode newnode=new ListNode(value);
+            newnode.next=head;
+            head=newnode;
+        }
+        
+        public static void main(String[] args) {
+	    Main SinglyLinkedList=new Main();
+	   // SinglyLinkedList.head=new ListNode(10);
+	   // ListNode second=new ListNode(1);
+	   // ListNode third=new ListNode(8);
+	    //ListNode fourth=new ListNode(11);
+	    
+	    //SinglyLinkedList.head.next=second;
+	    //second.next=third;
+	    //third.next=fourth;
+	    SinglyLinkedList.insertfirst(11);
+	    SinglyLinkedList.insertfirst(8);
+	    SinglyLinkedList.insertfirst(1);
+	    SinglyLinkedList.display();
+output
+1-->8-->11-->null	
+	
