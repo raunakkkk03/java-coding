@@ -447,3 +447,64 @@ public class Main
 output
 1-->8-->11-->null	
 	
+insert node at the end
+public class Main
+{
+    
+        private ListNode head;
+        private static class ListNode{
+            private int data;
+            private ListNode next;
+            
+            public ListNode(int data){
+                this.data=data;
+                this.next=null;
+            }
+        }
+        public void display(){
+            ListNode current=head;
+            while(current!=null){
+                System.out.print(current.data+"-->");
+                current=current.next;
+            }
+            System.out.print("null");
+        }
+        
+        public void insertfirst(int value){
+            ListNode newnode=new ListNode(value);
+            newnode.next=head;
+            head=newnode;
+        }
+        public void insertlast(int value){
+            ListNode newnode=new ListNode(value);
+            if(head==null){
+                head=newnode;
+                return;
+            }
+            ListNode current=head;
+            while(null!=current.next){
+                current=current.next;
+                
+            }
+            current.next=newnode;
+        }
+        
+        public static void main(String[] args) {
+	    Main SinglyLinkedList=new Main();
+	   // SinglyLinkedList.head=new ListNode(10);
+	   // ListNode second=new ListNode(1);
+	   // ListNode third=new ListNode(8);
+	    //ListNode fourth=new ListNode(11);
+	    
+	    //SinglyLinkedList.head.next=second;
+	    //second.next=third;
+	    //third.next=fourth;
+	    SinglyLinkedList.insertlast(11);
+	    SinglyLinkedList.insertlast(8);
+	    SinglyLinkedList.insertlast(1);
+	    SinglyLinkedList.display();
+	    
+    }
+}
+output
+11-->8-->1	
