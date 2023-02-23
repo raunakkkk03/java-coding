@@ -581,3 +581,90 @@ public class Main
 }
 output
 8-->1-->null	
+
+DELETE LAST NODE OF SLL
+public class Main
+{
+    
+        private ListNode head;
+        private static class ListNode{
+            private int data;
+            private ListNode next;
+            
+            public ListNode(int data){
+                this.data=data;
+                this.next=null;
+            }
+        }
+        public void display(){
+            ListNode current=head;
+            while(current!=null){
+                System.out.print(current.data+"-->");
+                current=current.next;
+            }
+            System.out.print("null");
+        }
+        
+        public void insertfirst(int value){
+            ListNode newnode=new ListNode(value);
+            newnode.next=head;
+            head=newnode;
+        }
+        public void insertlast(int value){
+            ListNode newnode=new ListNode(value);
+            if(head==null){
+                head=newnode;
+                return;
+            }
+            ListNode current=head;
+            while(null!=current.next){
+                current=current.next;
+                
+            }
+            current.next=newnode;
+        }
+        public ListNode deletefirst(){
+            if(head==null){
+                return null;
+            }
+            ListNode temp=head;
+            head=head.next;
+            temp.next=null;
+            return temp;
+        }
+        public ListNode deleteLast(){
+            if(head==null || head.next==null){
+                return head;
+            }
+            ListNode current=head;
+            ListNode previous=null;
+            while(current.next!=null){
+                previous=current;
+                current=current.next;
+                
+            }
+            previous.next=null;
+            return current;
+        }
+        
+        public static void main(String[] args) {
+	    Main SinglyLinkedList=new Main();
+	   // SinglyLinkedList.head=new ListNode(10);
+	   // ListNode second=new ListNode(1);
+	   // ListNode third=new ListNode(8);
+	    //ListNode fourth=new ListNode(11);
+	    
+	    //SinglyLinkedList.head.next=second;
+	    //second.next=third;
+	    //third.next=fourth;
+	    SinglyLinkedList.insertlast(11);
+	    SinglyLinkedList.insertlast(8);
+	    SinglyLinkedList.insertlast(1);
+	    SinglyLinkedList.display();
+	    System.out.println(SinglyLinkedList.deleteLast().data);
+	    SinglyLinkedList.display();
+	    
+    }
+}
+OUTPUT
+11-->8	
